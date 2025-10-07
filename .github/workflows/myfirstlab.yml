@@ -17,4 +17,4 @@ jobs:
       run: pip install pytest
 
     - name: Привітаємося зі світом
-      run:  emoji_greeting.py
+      run:  pyton emoji_greeting.py
