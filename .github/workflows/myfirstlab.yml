@@ -13,9 +13,9 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: Установить зависимости
+    - name: Для перевірки кода
       run: pip install pytest
 
-    - name: Запустить Python-код
+    - name: Привітаємося зі світом
       run: |
         python -c "import random; emotions = ['😄','😂','🤓','😎','🥳','🤖']; print('Hello, world!!! Today I feel like', random.choice(emotions))"
