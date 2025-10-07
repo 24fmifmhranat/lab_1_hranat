@@ -21,5 +21,5 @@ def test_division():
 
 def test_power():
     """Піднесення до степеню"""
-    assert pow(2, 3) == 8 
+    assert pow(2, 3) == 8
     assert pow(5, 0) == 1
