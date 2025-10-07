@@ -17,5 +17,4 @@ jobs:
       run: pip install pytest
 
     - name: Привітаємося зі світом
-      run: |
-        python -c "import random; emotions = ['😄','😂','🤓','😎','🥳','🤖']; print('Hello, world!!! Today I feel like', random.choice(emotions))"
+      run:  emoji_greeting.py
