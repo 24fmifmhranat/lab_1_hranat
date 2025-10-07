@@ -1,1 +1,27 @@
+name: Run Pytest on Push
 
+on:
+  push:  # Стартуємо при будь-якому push
+    branches:
+      - '**'  # Вкажемо що для всіх гілок
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Клонуємо репозитарій на віртуальну машину
+      uses: actions/checkout@v3
+
+    - name: Встановимо Python на віртуальну машину
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Встановимо залежності якщо необхідно
+      run: |
+        pip install -r requirements.txt
+        pip install pytest
+
+    - name: Запуск тестування
+      run: pytest
