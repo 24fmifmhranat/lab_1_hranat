@@ -1,5 +1,7 @@
-on:
-  push:
+name: Hello World!
+on: push
+jobs:
+    push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
